@@ -1,8 +1,8 @@
 <template>
     <div class="d-flex">
         <div class="col-2 d-flex- flex-column">
-            <Filtros />
-            <Campos />
+            <DynamicTableFilters />
+            <DynamicTableFields />
         </div>
         <div class="col-10">
             <TablePreHeader />
@@ -12,15 +12,15 @@
 </template>
 
 <script lang="ts">
-import Filtros from '../Filtros.vue';
-import Campos from '../Campos.vue';
-import Table from '../Table.vue';
-import TablePreHeader from '../DynamicTable/TablePreHeader.vue'
+import DynamicTableFilters from './Panel/Filters.vue';
+import DynamicTableFields from './Panel/Fields.vue';
+import TablePreHeader from './TablePreHeader.vue'
+import Table from './Table.vue';
 
 export default {
     components: {
-        Filtros,
-        Campos,
+        DynamicTableFilters,
+        DynamicTableFields,
         Table,
         TablePreHeader
     }

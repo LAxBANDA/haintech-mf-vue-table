@@ -5,14 +5,15 @@
 
   <div class="container">
     <h2>Contactos</h2>
-    <DynamicTable />
+    <DynamicTableBase />
   </div>
 </template>
 
 <script lang="ts">
-import DynamicTable from './DynamicTable.vue';
+
+import DynamicTableBase from './components/DynamicTable/Base.vue';
 
 export default { 
-  components: { DynamicTable },
+  components: { DynamicTableBase },
 }
 </script>

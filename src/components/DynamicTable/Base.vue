@@ -6,8 +6,8 @@
 </template>
 
 <script lang="ts">
-import DynamicTablePrimaryHeader from './DynamicTable/PrimaryHeader.vue';
-import DynamicTablePrimaryContent from './DynamicTable/PrimaryContent.vue';
+import DynamicTablePrimaryHeader from './PrimaryHeader.vue';
+import DynamicTablePrimaryContent from './PrimaryContent.vue';
 
 export default { 
     components: { DynamicTablePrimaryHeader, DynamicTablePrimaryContent },
