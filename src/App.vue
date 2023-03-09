@@ -1,12 +1,18 @@
 <template>
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap" rel="stylesheet">
+  </head>
+
   <div class="container">
-    <Table></Table>
+    <h2>Contactos</h2>
+    <DynamicTable />
   </div>
 </template>
 
 <script lang="ts">
-  import { defineComponent } from 'vue'
-import Table from './Table.vue';
+import DynamicTable from './DynamicTable.vue';
 
-  export default defineComponent({ components: { Table } });
+export default { 
+  components: { DynamicTable },
+}
 </script>

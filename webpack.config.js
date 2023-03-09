@@ -40,6 +40,17 @@ module.exports = {
         test: /\.(css|s[ac]ss)$/i,
         use: ["style-loader", "css-loader", "postcss-loader"],
       },
+      {
+        test: /\.(png|jpg|gif)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+            }
+          },
+        ]
+      },
     ],
   },
 
@@ -48,7 +59,9 @@ module.exports = {
     new ModuleFederationPlugin({
       name: "mf_tables",
       filename: "remoteEntry.js",
-      remotes: {},
+      remotes: {
+        'vue_remote': 'vue_remote@http://localhost:4200/remoteEntry.js'
+      },
       exposes: {},
       shared: require("./package.json").dependencies,
     }),
